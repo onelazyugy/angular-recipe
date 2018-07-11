@@ -9,7 +9,7 @@ import {
 @Directive({
     selector: '[appDropdown]'
 })
-export class DropdownDirective implements OnInit {
+export class DropdownDirective {
     @HostBinding('class.open') isOpen: boolean = false;
 
     @HostListener('click') toggleOpen() {
