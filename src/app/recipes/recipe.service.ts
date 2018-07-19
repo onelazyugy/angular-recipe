@@ -9,8 +9,8 @@ export class RecipeService {
 
     private recipes: Recipe[] = [
         new Recipe(
-            'A Test Recipe',
-            'This is simply a test',
+            'Sizzling Potatoe Recipe',
+            'This is sizzling potatoe',
             'https://www.seriouseats.com/recipes/images/2016/12/20161201-crispy-roast-potatoes-29.jpg',
             [
                 new Ingredient('Potatoe', 3),
@@ -37,5 +37,9 @@ export class RecipeService {
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
         this.shoppingListService.addIngredients(ingredients);
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 }
