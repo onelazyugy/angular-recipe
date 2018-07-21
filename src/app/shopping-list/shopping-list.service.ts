@@ -3,16 +3,21 @@ import { EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
 
 export class ShoppingListService {
+    ingredientChanged = new Subject<Ingredient[]>();
+    startedEditing = new Subject<number>();
+
     private ingredients: Ingredient[] = [
         new Ingredient('Apples', 5),
         new Ingredient('Orange', 10),
     ];
 
-    ingredientChanged = new Subject<Ingredient[]>();
-
     getIngridents() {
         // return only a copy not the original stored above
         return this.ingredients.slice();
+    }
+
+    getIngrident(index: number) {
+        return this.ingredients[index];
     }
 
     addIngredient(ingredient: Ingredient) {
