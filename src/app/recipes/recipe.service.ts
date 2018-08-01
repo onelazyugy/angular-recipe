@@ -31,6 +31,12 @@ export class RecipeService {
 
     constructor(private shoppingListService: ShoppingListService) {}
 
+    setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        // emit to everyone who subscribe this this observable
+        this.recipesChanged.next(this.recipes.slice());
+    }
+
     getRecipes() {
         // deep copy, not modify the recipes array above
         return this.recipes.slice();
