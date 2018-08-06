@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## Firebase
+https://console.firebase.google.com/
+- project in firebase: ng-recipe-book-5425a
+- url: https://ng-recipe-book-5425a.firebaseio.com/
+- Database: use the realtime database
+- Auth method: email and password
+- database rules
+- <code>{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}</code>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
