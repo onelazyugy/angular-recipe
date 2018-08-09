@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { DropdownDirective } from './dropdown.directive';
 import { CommonModule } from '@angular/common';
 
+/**DON'T PROVIDE ANY SERVICES IN SHARED MODULES*/
 @NgModule({
     declarations: [
         DropdownDirective
