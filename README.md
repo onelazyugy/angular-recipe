@@ -16,6 +16,8 @@ https://console.firebase.google.com/
     ".write": "auth != null"
   }
 }</code>
+- login: test at test .com
+- 123456
 
 ## Development server
 
