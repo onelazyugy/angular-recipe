@@ -19,6 +19,10 @@ https://console.firebase.google.com/
 - login: test at test .com
 - 123456
 
+## JiT and AoT (just in time and ahead of time compiler)
+- ng build --prod --aot
+- ng build --prod (will use aot)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -35,6 +35,10 @@ export class RecipeEditComponent implements OnInit {
     this.router.navigate(['../'], {relativeTo: this.route});
   }
 
+  getControls() {
+    return (<FormArray>this.recipeForm.get('ingredients')).controls;
+  }
+
   onAddIngredient() {
     // cast to FormArray
     // this will add 2 controls (name and amount input fields)
